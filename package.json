@@ -1,0 +1,19 @@
+{
+     "name": "wabot",
+     "version": "0.0.1",
+     "description": "WhatsappBot",
+     "main": "index.js",
+     "type": "commonjs",
+     "scripts": {
+          "start": "node index.js"
+     },
+     "dependencies": {
+          "@adiwajshing/keyed-db": "latest",
+          "@google/generative-ai": "^0.12.0",
+          "@whiskeysockets/baileys": "^6.6.0",
+          "dotenv": "^16.4.5",
+          "node-cache": "latest",
+          "nodemon": "^3.1.2",
+          "readline": "latest"
+     }
+}
