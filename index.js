@@ -111,7 +111,6 @@ async function start() {
 			// console.log(isMessageFromGroup);
 			// console.log(isMessageMentionBot);
 			if (!messages[0].key.participant) {
-				console.log(pesanMasuk);
 
 				//tentukan jenis pesan berbentuk text                
 				const pesan = messages[0].message?.conversation;
@@ -127,6 +126,7 @@ async function start() {
 				await sock.readMessages([messages[0].key]);
 				//kecilkan semua pesan yang masuk lowercase 
 				const pesanMasuk = pesan?.toLowerCase();
+				console.log(pesanMasuk);
 
 				if (pesanMasuk?.includes("?") || pesanMasuk?.includes("!")) {
 					// const getDataAi = await getResponseAI(pesanMasuk);
@@ -140,12 +140,12 @@ async function start() {
 				}
 			}
 			if (isMessageFromGroup && isMessageMentionBot) {
-				console.log(pesanMasuk);
 
 				const pesan = messages[0].message?.extendedTextMessage.text;
 				const pesanMasuk = pesan.toLowerCase();
 				const noWa = messages[0].key.remoteJid;
 
+				console.log(pesanMasuk);
 				// console.log(pesanMasuk);
 				// const getDataAi = await getResponseAI(pesanMasuk);
 				const getDataAi = await getAnswerGemini(pesanMasuk);
